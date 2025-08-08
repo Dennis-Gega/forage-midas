@@ -1,4 +1,10 @@
 spring:
+    datasource:
+        url: jdbc:h2:mem:mydb
+        username: sa
+        password: password
+        driverClassName: org.h2.Driver
+
     kafka:
         consumer:
             auto-offset-reset: earliest
@@ -7,7 +13,6 @@ spring:
                 spring.json.trusted.packages: "*"
         producer:
             value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-
 
 logging:
     level:
